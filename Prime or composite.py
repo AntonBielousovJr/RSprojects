@@ -14,16 +14,20 @@ while mode == 1:
 
     if n < 2:
         print("please enter a number greater than 1")
-        
-    while f <= n**(1/2):
+        mode = 1
 
-        f=f+1
+    else:
         
-        if (n%f) == 0:
-            print("the number", n,"is composite")
-            n = 0
-            mode = 1
-            
-        if f >= n**(1/2) and ((n%f) < 0 or (n%f) > 0):
-            print("the number", n,"is prime")
-            mode = 1
+        while f <= n**(1/2):
+
+                f=f+1
+                
+                if (n%f) == 0:
+                    print("the number", n,"is composite")
+                    n = 0
+                    mode = 1
+                    
+                if f >= n**(1/2) and ((n%f) < 0 or (n%f) > 0):
+                    print("the number", n,"is prime")
+                    mode = 1
+
